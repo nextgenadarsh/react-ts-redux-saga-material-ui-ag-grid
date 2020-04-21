@@ -9,11 +9,6 @@ import { setAdminAction } from "./redux/actions";
 import SideNavLayout from "./layouts/side-nav-layout/side-nav-layout";
 import ToggleSwitch from "./layouts/toggle-switch/toggle-switch";
 
-const HomePage = lazy(() => import("./pages/home"));
-const TodoPage = lazy(() => import("./pages/todo"));
-const MaterialUiPage = lazy(() => import("./pages/material-ui"));
-const ContactPage = lazy(() => import("./pages/contact"));
-
 const App = props => {
   const [theme, setTheme] = useState("dark");
 
@@ -23,7 +18,7 @@ const App = props => {
 
   return (
     <div className="app">
-      <div className="alert alert-success">
+      <div className="alert alert-success" style={{ textAlign: "center" }}>
         <strong>
           ReactJs + TypeScript + Redux Saga + Material UI + AgGrid
         </strong>

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import DataService from "../services/data-service";
 
 const useCustomStatus = () => {
-  const [status, setStatus] = useState(null);
+  const [status, setStatus] = useState('');
 
   const statusSubscriptionRef = useRef();
 

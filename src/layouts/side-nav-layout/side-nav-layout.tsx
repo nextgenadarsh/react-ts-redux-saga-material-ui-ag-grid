@@ -8,7 +8,9 @@ import SideNav from "../side-nav/side-nav";
 const HomePage = lazy(() => import("../../pages/home"));
 const HooksPage = lazy(() => import("../../pages/hooks"));
 const MaterialUiPage = lazy(() => import("../../pages/material-ui"));
+const TestPage =  lazy(() => import("../../pages/test"));
 const ContactPage = lazy(() => import("../../pages/contact"));
+
 
 const SideNavLayout = () => {
   return (
@@ -21,6 +23,7 @@ const SideNavLayout = () => {
             <Route path="/hooks" component={HooksPage} />
             <Route path="/material-ui" component={MaterialUiPage} />
             <Route path="/contact" component={ContactPage} />
+            <Route path="/test" component={TestPage} />
           </Switch>
         </Suspense>
       </div>

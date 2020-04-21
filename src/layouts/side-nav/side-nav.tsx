@@ -8,6 +8,7 @@ const SideNav = () => {
     { path: "/", label: "Home", bgColor: "red" },
     { path: "/hooks", label: "Hooks", bgColor: "blue" },
     { path: "/material-ui", label: "Material UI", bgColor: "green" },
+    { path: "/test", label: "Tests", bgColor: "purple" },
     { path: "/contact", label: "Contact", bgColor: "magenta" }
   ];
   return (

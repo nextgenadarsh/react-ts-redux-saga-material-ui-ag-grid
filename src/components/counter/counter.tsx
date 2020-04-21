@@ -63,30 +63,34 @@ const Counter = ({ initialCount }) => {
 
   return (
     <div style={{ background: theme.background, color: theme.color }}>
-      <h2>Hooks Demo - Check console logs to understand flow and actions</h2>
+      <h4>Hooks Demo - Check console logs to understand flow and actions</h4>
       <hr />
       <h6>Current Status using Subscription: {status}</h6>
       <h6>Custom Status using Custom Hook: {customStatus}</h6>
       <hr />
-      <button
-        className="btn btn-primary"
-        onClick={() => setSuccessCounter(successCounter => successCounter + 1)}
-      >
-        Click if feeling good!!
-      </button>
-      {successCounter > 0 && <h3>You felt good {successCounter} times!</h3>}
-
+      <div style={{ display: "flex" }}>
+        <button
+          className="btn btn-primary"
+          onClick={() =>
+            setSuccessCounter(successCounter => successCounter + 1)
+          }
+        >
+          Click if feeling good!!
+        </button>
+        {successCounter > 0 && <h3>You felt good {successCounter} times!</h3>}
+      </div>
       <hr />
-
-      <button
-        className="btn btn-danger"
-        onClick={() => dispatch({ type: "increament" })}
-      >
-        Click if in danger!
-      </button>
-      {state.dangerCount > 0 && (
-        <h3>You felt danger {state.dangerCount} times!</h3>
-      )}
+      <div style={{ display: "flex" }}>
+        <button
+          className="btn btn-danger"
+          onClick={() => dispatch({ type: "increament" })}
+        >
+          Click if in danger!
+        </button>
+        {state.dangerCount > 0 && (
+          <h3>You felt danger {state.dangerCount} times!</h3>
+        )}
+      </div>
     </div>
   );
 };
